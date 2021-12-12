@@ -1,0 +1,2 @@
+# macManuelJavascript
+JavaScript new directory
