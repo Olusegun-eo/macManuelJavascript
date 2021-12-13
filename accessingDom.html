@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Object Document Model</h1>
+
+    <script>
+    // run this function when the document is loaded
+    window.onload = function() {
+
+        const creatHOne = document.createElement("h1");
+        const addTextToElement = document.createTextNode("Big Head!!!");
+        creatHOne.appendChild(addTextToElement);
+    }
+
+    </script>
+</body>
+</html>

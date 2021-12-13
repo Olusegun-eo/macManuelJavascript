@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="console.log('Welcome to Document Object Model!!!');">
+
+    <p >Functions can automatically call itself</p>
+    <p id="demo"></p>
+
+    <p id="para">Second Paragraph to length of Arguments </p>
+    
+
+    <script>
+
+        (function () {
+            document.getElementById('demo').innerHTML = "I called myself";
+        })();
+
+
+        //Function Return number of arguments
+        // The typeof operator in JavaScript returns "function" for functions.
+        // But, JavaScript functions can best be described as objects.
+        // JavaScript functions have both properties and methods.
+         
+        
+         let myFunct = function(a =2, b = "taye", c = "Segun"){
+               return arguments.length;
+        }
+
+        document.getElementById('para').innerHTML = myFunct(23, 34, 76);
+
+        
+        let myFunction = function(a = "Gladding", b = 23, c = "money"){
+            console.log(`${a} ${b} ${c}`)
+                    }
+            myFunction(34, 76, 9 ); 
+
+
+
+            /*
+            DOM specifies"querySelectorAll" method must 
+            return a list of all the <p> elements in the document:*/
+                const paragraphs = document.querySelectorAll("p");
+                alert(paragraphs[0].nodeName);
+    </script>
+</body>
+</html>

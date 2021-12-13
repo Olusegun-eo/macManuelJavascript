@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+               // run this function when the document is loaded
+               window.onload = function() {
+
+
+
+            // create a couple of elements in an otherwise empty HTML page
+                   const element = document.createElement("h1");
+                   console.log(element);
+                   const addTextToElemnt = document.createTextNode("Creating  the Head One Tag!!!");
+
+                   element.appendChild(addTextToElemnt);
+                   document.body.appendChild(element)
+               }
+
+    </script>
+</head>
+<body>
+
+<h3>
+structure of the page (written in HTML) <br>
+ and manipulation of the DOM (written in JavaScript)
+</h3>
+
+  <h4>  For example, the following function creates a new <i> "h1" </i> element 
+  adds text to that element, and then adds it to the tree for the document </h4>
+
+
+
+</body>
+</html>
