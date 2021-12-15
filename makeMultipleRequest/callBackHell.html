@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Call back Hell</h1>
+    <p>Making multile call request one after the other</p>
+    <p>This happens when we have multiple request to make...And it is called "CALLBACKHELL".</p>
+    <p>CallBackHell hapens when we nest callBack request inside another, and another inside another</p>
+
+    <h4>Procedure:</h4>
+    <ul>
+        <li>Pass 2 parameters inside your function: getTodoDos= (1: resource, 2: callBack) =>{} </li>
+        <li>resource: it serves the url for our "Endpoints"(i.e==Where togo get Data)</li>
+        <li>Then you can have ...request('Get', resource)</li>
+    </ul>
+
+    <ul>
+        And Finally, you can now next your function inside each other....
+        getTodoDos = ('eachDataAddress', (err, data) =>{
+            statements one
+            getToDos = ('eachDataAddress', (err, data)=>{
+            statement two...
+                getToDos = ('eachDataAddress', (err, data)=>{
+                    statements three
+                })
+            })
+        })
+    </ul>
+    <script src="callBackHell.js"></script>
+</body>
+</html>
