@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How To make Promises</h1>
+    <p>A promise is that I am goin to do something and I will either get resolved or reject</p>
+    <p>
+        it is about having a function that getSomething = ()=>{
+            ....that has some kind of NetWork request, Like we've been doing
+            ...It will take in Some Data That will take some time to do
+            ...A promise return new Promise() that will lead one or two outcomes
+            ...A promise will be resolved i.e we get the data AND it resolved
+            ...Or We get error and It is rejected. 
+            Promise takes-in 2 params wich are also built-in js param called(resolved, reject
+            return new Promise( (resolve , reject) =>{
+                //WE do smthg e.g Fetch data
+                If we get some data back, We call resolve(and pass data inside it)
+            })
+        }
+        If we get apromise(data) back And we call getSomething(), Then we tack on
+        .then( ()=>()--->A promise is saying I will fire this func wen we resolved promise)
+        this func takes-in the data we resolved. We add the second func to if get error a reject in the same way
+        .then( ()=>{
+            console.log(data, "the func fired")
+        }, (err)=>{
+            console.log(err)
+        })
+
+
+        <h1>A better wayq to Handle promise and its params</h1>
+        <p>
+            getSomething().then( (data)=>{
+                console.log(data)
+            }).catch( (err)=>{
+                console.log(err)
+            })
+        </p>
+    </p>
+
+    <script src="makePromises.js"></script>
+</body>
+</html>
