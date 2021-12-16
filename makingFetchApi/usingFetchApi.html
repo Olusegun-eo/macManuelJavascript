@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How to make Use Fetch Api over Old Api like HXMLHttpRequest Api</h1>
+    <p>Note That: AsynChronous function will always return A promise:...Which can either be "resolved" or "rejected"
+    </p>
+    <p>Here, we simply call fetch(and pass-in endpoint to our api ...i.e url address to our data)</p>
+
+    <p>
+        fetch('/getToDos/industry').then( (response)=>{
+            console.log(response)
+            NOTE: Here...if you inspect, you will not see the data we got BUT if you check __Prototype__REsponse
+            you will see json.ok ===>wich e can use to format our promise
+            response.json();
+        }).catch( (err)=>{
+            console.log(err)
+        }))
+    </p>
+
+    <script src="usingFetchApi.js"></script>
+</body>
+</html>
